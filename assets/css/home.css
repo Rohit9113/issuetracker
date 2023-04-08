@@ -1,0 +1,154 @@
+p,
+h1 {
+    margin: 0%;
+    padding: 0%;
+
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #0d0e0c;
+    margin: 0%;
+    padding: 0%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: space-evenly;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.side {
+    border: 1px dotted red;
+    width: 17%;
+}
+
+
+.project-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+
+.project-div {
+    border: 1px dotted black;
+    width: 40%;
+    background-color: darkgray;
+    margin: 1%;
+    border-radius: 3vh;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+
+.project-name {
+    border-bottom: 1px dotted rgb(252, 251, 251);
+    color: #c3c3c3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border-top-left-radius: 3vh;
+    border-top-right-radius: 3vh;
+    padding: 1%;
+}
+
+.del {
+    margin-right: 2vh;
+}
+
+.del a {
+    text-decoration: none;
+    color: wheat;
+}
+
+.project-name h1 {
+    margin-left: 10%;
+
+
+}
+
+.project-details {
+
+    border-radius: 3vh;
+}
+
+.project-details p,
+h1 small {
+    font-weight: 500;
+    color: #0d0e0c;
+
+}
+
+.project-details h1 {
+    margin-left: 2%;
+
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    font-size: 1.3rem;
+}
+
+.data p a {
+    text-decoration: none;
+    color: red;
+    font-size: 1.3rem;
+}
+
+.data p {
+    font-size: 1rem;
+    margin-left: 2%;
+    width: 30%;
+}
+
+#addbtn {
+    margin-top: 5%;
+}
+
+#flip {
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+.accordion {
+    border: 1px dotted wheat;
+    background-color: #171717; 
+    width: 50%;
+    align-self: center;
+    color: white;
+
+}
+
+.c {
+    height: min-content;
+}

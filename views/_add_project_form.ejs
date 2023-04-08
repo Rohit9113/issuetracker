@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/add_project.css">
+
+<section class="" id="project-feed">
+   
+    <% if(locals.user){%>
+
+        <!-- Create new project input section -->
+        <form class="" action="/project/create" id="new-project-form" method="post">
+            <input type="text" name="projectName" placeholder="projectName" style="background-color: black; border: solid rgb(255, 255, 255) 1px;">
+            <textarea name="description" id="" cols="30" rows="10" style="background-color: black; border: solid rgb(255, 255, 255) 1px;"></textarea>
+            <input type="text" name="auther" placeholder="Auther" style="background-color: black; border: solid rgb(255, 255, 255) 1px;">
+           
+            <input type="submit" id="addBtn" value="Post">
+        </form>
+        <!-- massage of not login user -->
+        <%} else{ %>
+            <h1>You are not signed-in!</h1>
+        <%} %>
+</section>

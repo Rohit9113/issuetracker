@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/header.css">
+
+<header>
+    <nav>
+        <div class="navbar navbar-expand-sm bg-light">
+            <div class="container-fluid">
+            <ul class="h-links">
+                <li>
+                    <a class="navbar-brand ms-4" href="/">IssueTracker</a>
+                </li>
+                <li class="homepage">
+                    <a class="navbar-brand ms-4" href="/">Home</a>
+                </li>
+                <% if(locals.user){ %>
+                <li>
+                  <a class="navbar-brand ms-4" href="/users/profile"> <%= user.name %></a>
+
+                </li>
+                <li><a class="navbar-brand ms-4" href="/users/sign-out">SignOut</a></li>
+                <% } else { %>
+                    <li><a class="navbar-brand ms-4" href="/users/sign-in" class="signin">signIn</a></li>
+                    <li><a class="navbar-brand ms-4" href="/users/sign-up" class="signup">signUp</a></li>
+                <% } %>
+            </ul>
+            </div>
+        </div>
+        
+    </nav>
+
+</header>

@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/create_issue_form.css">
+
+<div class="main">
+    <form action="/project/createIssue" method="post">
+        <input type="text" placeholder="Title" name="title">
+        <textarea name="description" id="" placeholder="Description" cols="30" rows="10"></textarea>
+
+        <label for="labels" class="col-sm-4 col-form-label">Add Labels</label>
+
+        <div class="select">
+            <input style="color: black;" class="form-check-input" name="labels" type="checkbox" value="Bug" id="bug" />
+           <input type="hidden" name="project" value="<%= open_projects._id %>" >
+            <label class="form-check-label" for="bug"> Bug </label><br /><input name="labels" class="form-check-input"
+                type="checkbox" value="UI Improvement" id="ui-improvement" />
+            <label class="form-check-label" for="ui-improvement">
+                UI Improvement </label><br /><input name="labels" class="form-check-input" type="checkbox"
+                value="Documentation" id="documentation" />
+            <label class="form-check-label" for="documentation">
+                Documentation </label><br /><input name="labels" class="form-check-input" type="checkbox"
+                value="Enhancement" id="enhancement" />
+            <label class="form-check-label" for="enhancement">
+                Enhancement </label><br /><input name="labels" class="form-check-input" type="checkbox"
+                value="Duplicate" id="duplicate" />
+            <label class="form-check-label" for="duplicate"> Duplicate </label>
+        </div>
+        <div class="lst">
+            <input type="text" name="author" placeholder="Author">
+            <input type="submit" id="isbtn" value="create issue">
+        </div>
+
+        <p><%= open_projects._id %> </p> 
+    </form>
+</div>

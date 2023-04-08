@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a18fa9a70e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/home.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body class="bgcolor">
+
+    <!-- <%- include('_header') %> -->
+    <div id="addbtn">
+        <div class="c container ">
+            <div class="accordion">
+                <div id="flip"><i class="fa-solid fa-plus">&nbsp;&nbsp;&nbsp;Create&nbsp;&nbsp;Project</i></div>
+                <div id="panel">
+
+                    <%- include('_add_project_form') %>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main">
+            <div class="head">
+                <a href=""></a>
+            </div>
+            <div class="project">
+                <section class="project-list">
+
+                    <% for(project of projects) { %>
+
+                        <div class="project-div">
+
+                            <div class="project-name">
+                                <h1>
+                                    <%= project.projectName %>
+                                </h1>
+                                <% if(locals.user && locals.user.id==project.user.id) {%>
+
+                                    <p class="del">
+                                        <a href="/project/destroy/<%= project.id %>">
+                                            <i class="fa-sharp fa-solid fa-trash"></i>
+                                        </a>
+                                    </p>
+
+
+                                    <%} %>
+                            </div>
+                            <div class="project-details" style="background-color: white;">
+                                <h3 style="margin-left: 4%;">
+                                    <small> Author :</small>
+                                    <%= project.auther %>
+                                </h1>
+                                <div class="data">
+                                    <p style="margin-left: 4%;">
+                                        <small>description: </small>
+                                        <%= project.description %>
+                                    </p>
+                                    <!-- <p style="margin-left: 4%;">
+                                        <small>user:</small> <%= project.user.name %>
+                                    </p> -->
+                                    <p style="margin-left: 4%;">
+                                        <a href="/project/open-project/<%= project._id %>"><i class="fa-solid fa-folder-open"></i>Open Project</a>
+                                    </p>
+
+                                    <% if(locals.user && locals.user.id==project.user.id) {%>
+
+
+
+                                        <!-- <p><a href="/project/destroy/<%= project.id %>">delete</a></p> -->
+
+
+                                        <%} %>
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <% } %>
+
+
+
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- <%- include('_footer') %> -->
+    <script src="/js/add_project_dailoge.js"></script>
+</body>
+
+</html>

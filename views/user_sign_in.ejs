@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a18fa9a70e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/sign_in.css">
+    <title>Login Here</title>
+</head>
+
+<body>
+
+    <div class="container m">
+        <div class="main-c container">
+            <h1 style="text-align: center; color: cadetblue; margin-bottom: 5%;">
+                Login
+            </h1>
+            <div class="credentials ">
+                <form action="/users/create-session" method="post">
+                    <div class="input-group flex-nowrap">
+                        <input type="email" name="email" class="form-control" placeholder="Enter Email"
+                            aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+
+                    <div class="input-group flex-nowrap">
+                        <input type="password" name="password" name="email" class="form-control" placeholder="Password"
+                            aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                    <div>
+                        <button type="submit" value="Login" name="login" class="btn btn-success"
+                            style="margin-top: 4%; margin-left: 33%;">Login</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="su" style="margin-top: 4%;">
+                <a href="#" style="text-decoration: none;">Signup</a>
+            </div>
+            <p class="gauth">
+                <i class="fa-solid fa-g"></i>
+                <a href="/users/auth/google" style="text-decoration: none; margin-top: 2%;"><i
+                        class="fa-solid fa-g"></i>oogle Sign-in/Sign-up</a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

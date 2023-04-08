@@ -1,0 +1,53 @@
+.project-div{
+    padding: 1%;
+    margin-left: 30%;
+}
+
+.data{
+    margin-left: 20%;
+    display: inline-block;
+    flex-direction: column;
+    height: 200px;  
+}
+.data p{
+    margin-top: 2.5vh;
+    color: wheat;
+}
+.data p small{
+    font-size: 1.2rem;
+    padding: 0.5%;
+    margin-top: 20px;
+    font-weight: 800;
+    
+}
+.desc{
+    border: 2px solid white;
+    width: 50vh;
+    height: 20vh;
+
+}
+.dp{
+    display: flex;
+    border: 2px solid rebeccapurple;
+    height: 200vh;
+}
+
+.issues-list{
+    border: 2px solid wheat;
+    padding: 1%;
+    flex-direction: column;
+    margin-top: 2%;
+}
+.issues-list li{
+    list-style: none;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+}
+.filter-box{
+    margin-top: 2%;
+}
+section{
+    color: aliceblue;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a18fa9a70e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/sign_up.css">
+    <title>Create Account</title>
+</head>
+
+<body>
+    <div class="c container">
+        <div id="g">
+            <h1>
+                Signup
+            </h1>
+            <div class="user-sup container">
+                <form action="/users/create" method="post">
+
+                    <div class="input-group flex-nowrap">
+                        <input type="text" name="name" class="form-control" placeholder="Enter Your Name"
+                            aria-label="Username" aria-describedby="addon-wrapping" required>
+                    </div>
+                    <!-- <input type="text" name="name" placeholder="your name" required> -->
+
+                    <div class="input-group flex-nowrap">
+                        <input type="email" name="email" class="form-control" placeholder="Enter Email ID"
+                            aria-label="Username" aria-describedby="addon-wrapping" required>
+                    </div>
+                    <!-- <input type="email" name="email" placeholder="Email" required> -->
+                    <!-- <input type="password" name="password" placeholder="Password" required> -->
+                    <div class="input-group flex-nowrap">
+                        <input type="password" name="password" class="form-control" placeholder="Create Password"
+                            aria-label="Username" aria-describedby="addon-wrapping" required>
+                    </div>
+                    <!-- <input type="password" name="confirm_password" placeholder="Confirm Password" required> -->
+                    <div class="input-group flex-nowrap">
+                        <input type="password" name="confirm_password" class="form-control"
+                            placeholder="Confirm Password" aria-label="Username" aria-describedby="addon-wrapping"
+                            required>
+                    </div>
+                    <button type="submit" value="Login" name="login" class="btn btn-success"
+                        style="margin-top: 5%; margin-left:20%; margin-right: 20%;">Create Account</button>
+
+                </form>
+
+                <p class="gauth">
+                    <i class="fa-solid fa-g"></i>
+                    <a href="/users/auth/google" style="text-decoration: none;"><i class="fa-solid fa-g"></i>oogle
+                        Sign-in/Sign-up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
